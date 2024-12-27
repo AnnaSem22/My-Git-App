@@ -6,19 +6,22 @@ package app;
 //більше 25000, за ставкою 6,7%.
 //Необхідно розрахувати суму податку від певної суми доходу. Сума податку дорівнює відсотку від суми доходу
 
+import java.util.Scanner;
+
 public class Main  {
+   static double RATE1 = 2.5;
+   static double RATE2 = 4.3;
+   static double RATE3 = 6.5;
+   static double income;
+   static double income2 = 10000.00;
+   static double income3 = 25000.00;
+   static double sum;
+   static String output;
 
     public static void main(String[] args) {
-        double RATE1 = 2.5;
-        double RATE2 = 4.3;
-        double RATE3 = 6.5;
-        double income;
-        double income2 = 10000.00;
-        double income3 = 25000.00;
-        double sum;
-        String output;
-
-        income = 15000.00;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введіть суму доходу: ");
+        income = sc.nextInt();
 
             if (income <= income2) {
                 sum = (income*RATE1)/100;
